@@ -45,7 +45,7 @@ body{
 	font-family: 'OpenSans-Regular'
 }
 .header {
-    background: url(../images/banner2.jpg)no-repeat 0px -180px;
+    background: url(images/banner2.jpg)no-repeat 0px -180px;
     background-size: cover;
     min-height: 950px;
 }
