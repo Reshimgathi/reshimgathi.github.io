@@ -80,8 +80,6 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	function loadMemories(file, callback) {
 	    var rawFile = new XMLHttpRequest();
 	    rawFile.overrideMimeType("application/json");
-	    rawFile.setRequestHeader();
-	    rawFile.setRequestHeader("Content-Type", "application/json");
 	    rawFile.open("GET", file, true);
 	    rawFile.onreadystatechange = function() {
 	        if (rawFile.readyState === 4 && rawFile.status == "200") {
