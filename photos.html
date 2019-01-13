@@ -80,6 +80,8 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	function loadMemories(file, callback) {
 	    var rawFile = new XMLHttpRequest();
 	    rawFile.overrideMimeType("application/json");
+	    rawFile.setRequestHeader();
+	    rawFile.setRequestHeader("Content-Type", "application/json");
 	    rawFile.open("GET", file, true);
 	    rawFile.onreadystatechange = function() {
 	        if (rawFile.readyState === 4 && rawFile.status == "200") {
@@ -96,10 +98,16 @@ loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
     var photoGridForm = "<h2>Event Photos -> An inauguration day - 30-Aug-18 - Reshimgathi</h2>";
     for(var i=0; i<data.Photos.length;i+3)
     {
-    	photoGridForm += "<div class='gallery-grids'><div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='col-md-4 gallery-grid'>		<div class='gallery-grd'>			 <a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='clearfix'> </div></div>";
+    	photoGridForm += "<div class='gallery-grids'>";
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"'><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div>";
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i+1].URL+"'><img src='"+data.Photos[i+1].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div>";
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i+2].URL+"'><img src='"+data.Photos[i+2].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='clearfix'></div></div>";
     }
 
-    document.getElementsById("container").innerHTML = photoGridForm;
+    document.getElementsById("photoscontainer").innerHTML = photoGridForm;
     console.log("done");
     console.log(photoGridForm);
 });
@@ -157,7 +165,7 @@ loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
 	<div class="content">
 				<!--wedding-->
 		<div class="wedding-section">
-		<div class="container">
+		<div class="container" id="photoscontainer">
 			
 			<!-- Add Events Photos to container dynamically.-->
 			
