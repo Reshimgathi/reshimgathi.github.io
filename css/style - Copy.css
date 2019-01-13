@@ -45,9 +45,9 @@ body{
   font-family: 'OpenSans-Regular'
 }
 .header {
-    background: url(../images/banner2.jpg)no-repeat 0px 0px;
+    background: url(../images/banner2.JPG) no-repeat 0px -180px;
     background-size: cover;
-    min-height: 755px;
+    min-height: 950px;
 }
 .header-top {
     padding: 2em 0;
@@ -128,7 +128,7 @@ span.menu {
 }
 .slider-info h3 {
   font-size: 5em;
-  color:#652840;
+  color:red;
   font-family: 'Sail-Regular';
 
 }
@@ -165,7 +165,7 @@ a.button2 {
 }
 .banner-grids {
     position: absolute;
-    top: 156px;
+    top: 364px;
     left: 0;
     width: 100%;
     text-align: center;
@@ -755,7 +755,7 @@ span.glyphicon.glyphicon-send {
   color: #eee;
   font-size: 1em;
   padding: 6px 24px;
-  background: url(../images/list-arrow.png) no-repeat 0px 10px;
+  background: url(../images/list-arrow.html) no-repeat 0px 10px;
   line-height:2em;
   text-decoration:none;
  }
