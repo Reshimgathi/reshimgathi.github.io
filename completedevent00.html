@@ -75,6 +75,48 @@ if(typeof _bsa !== 'undefined' && _bsa) {
 ga('create', 'UA-30027142-1', 'w3layouts.com');
   ga('send', 'pageview');
 </script>
+<script type="text/javascript">
+	
+	function loadMemories(file, callback) {
+	    var rawFile = new XMLHttpRequest();
+	    rawFile.overrideMimeType("application/json");
+	    rawFile.open("GET", file, true);
+	    rawFile.onreadystatechange = function() {
+	        if (rawFile.readyState === 4 && rawFile.status == "200") {
+	            callback(rawFile.responseText);
+	        }
+	    }
+    	rawFile.send(null);
+	}
+
+//usage:
+loadMemories("images/json/ZuXeiFiGoTAukdrRA.json", function(text){
+    var parent = null;
+    var data = JSON.parse(text);
+    console.log(data);
+    var photoGridForm = "";
+    for(var i=0; i<data.Photos.length;i++)
+    {
+    	photoGridForm = "<div class='gallery-grids'>";
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"'><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div>";
+
+    	i++;
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"'><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div>";
+
+    	i++;
+
+    	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"'><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='clearfix'></div></div>";
+
+    	parent = document.getElementById('photoscontainer');
+	  	parent.insertAdjacentHTML('beforeend', photoGridForm);//child added.
+    }
+
+    console.log("done");
+});
+
+</script>
 <body>
 <!--header-->
 	<div class="header head-top">
@@ -91,7 +133,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
         <span class="icon-bar"></span>
       </button>
 	  <div class="navbar-brand">
-      <h1><a href="index-2.html">Reshimgathi</a></h1>
+      <h1><a href="index.html">Reshimgathi</a></h1>
 	  </div>
     </div>
 
@@ -100,15 +142,15 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
       <ul class="nav navbar-nav">
         <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
         <li><a href="events.html">Upcoming Events</a></li>
-        <li class="dropdown">
+        <li class="dropdown" class="active">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="photos.html">Photos</a></li>
+            <li class="active"><a href="photos.html">Photos</a></li>
             <li><a href="videos.html">Videos</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </li>
-		<li class="active"><a href="wedding.html">Wedding</a></li>
+		<li><a href="wedding.html">Wedding</a></li>
 		<li><a href="mycity.html">Ambajogai Tour</a></li>
 		<li><a href="about.html">About</a></li>
 		<li><a href="contact.html">Contact</a></li>
@@ -127,63 +169,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	<div class="content">
 				<!--wedding-->
 		<div class="wedding-section">
-		<div class="container">
-				<h2>wedding</h2>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-					 <a class="swipebox" href="images/g1.jpg" ><img src="images/g1.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g2.jpg" ><img src="images/g2.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g3.jpg" ><img src="images/g3.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g4.jpg" ><img src="images/g4.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g5.jpg" ><img src="images/g5.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g6.jpg" ><img src="images/g6.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g7.jpg" ><img src="images/g7.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g8.jpg" ><img src="images/g8.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g9.jpg" ><img src="images/g9.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+		<div class="container" id="photoscontainer">
+			<h2>Event Photos -> An inauguration day Reshimgathi 30/Dec/2018</h2>
+			<!-- Add Events Photos to container dynamically.-->
+			
 			</div>
 			</div>
 
