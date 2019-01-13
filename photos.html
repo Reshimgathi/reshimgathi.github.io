@@ -77,12 +77,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 </script>
 <script type="text/javascript">
 	
-	function loadMemories()
-	{
-
-	}
-
-	function readTextFile(file, callback) {
+	function loadMemories(file, callback) {
 	    var rawFile = new XMLHttpRequest();
 	    rawFile.overrideMimeType("application/json");
 	    rawFile.open("GET", file, true);
@@ -95,12 +90,18 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	}
 
 //usage:
-readTextFile("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
-	alert("hello");
+loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
     var data = JSON.parse(text);
-    
-    console.log(data["Photos"][0]);
     console.log(data);
+    var photoGridForm = "<h2>Event Photos -> An inauguration day - 30-Aug-18 - Reshimgathi</h2>";
+    for(var i=0; i<data.Photos.length;i+3)
+    {
+    	photoGridForm += "<div class='gallery-grids'><div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='col-md-4 gallery-grid'>		<div class='gallery-grd'>			 <a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i].URL+"' ><img src='"+data.Photos[i].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='clearfix'> </div></div>";
+    }
+
+    document.getElementsById("container").innerHTML = photoGridForm;
+    console.log("done");
+    console.log(photoGridForm);
 });
 
 </script>
@@ -157,62 +158,9 @@ readTextFile("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
 				<!--wedding-->
 		<div class="wedding-section">
 		<div class="container">
-				<h2>Event Photos -> </h2>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-					 <a class="swipebox" href="https://lh3.googleusercontent.com/Tz1ty6oluBTgvUd2tyVlCE7YZSFMjdumi9GQIpUkuAkX1W8K6SH_YvD4jRGPC7mz0or1bUOXgjvB6hizCguueyMOuPA2IIP_svzCzuFPRms0W9y-Q-sFTI-NclYEXGKhFvKiuML25Q=w1920-h1080" ><img src="https://lh3.googleusercontent.com/Tz1ty6oluBTgvUd2tyVlCE7YZSFMjdumi9GQIpUkuAkX1W8K6SH_YvD4jRGPC7mz0or1bUOXgjvB6hizCguueyMOuPA2IIP_svzCzuFPRms0W9y-Q-sFTI-NclYEXGKhFvKiuML25Q=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="https://lh3.googleusercontent.com/iwaPFe_pBoSTdiU8Y_KHen2uNXk41OVbMG5JXvvZoB2qF49LSv5DtrvmwP5eX1LOuGfAhEpg87a5WPu2yic2NdFBPAHMnmZmZlpuid7fCkHbfSxjzlI4gvV9IxAn_0RG86ncDR2XDA=w1920-h1080"><img src="https://lh3.googleusercontent.com/iwaPFe_pBoSTdiU8Y_KHen2uNXk41OVbMG5JXvvZoB2qF49LSv5DtrvmwP5eX1LOuGfAhEpg87a5WPu2yic2NdFBPAHMnmZmZlpuid7fCkHbfSxjzlI4gvV9IxAn_0RG86ncDR2XDA=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="https://lh3.googleusercontent.com/R9R70BaKla9c1NbDqkA0o4zdCS--Twf4FnFgZ5UJIBd5NqbSOiP-Fy2LMYX8FN8l_HbrOh_lPoGHSOxmHkgI86uS3hCj9RaIKxrBjxgtbpHDU9SinzVgMAcOVMYFDYNla0vgC-Q_Og=w1920-h1080" ><img src="https://lh3.googleusercontent.com/R9R70BaKla9c1NbDqkA0o4zdCS--Twf4FnFgZ5UJIBd5NqbSOiP-Fy2LMYX8FN8l_HbrOh_lPoGHSOxmHkgI86uS3hCj9RaIKxrBjxgtbpHDU9SinzVgMAcOVMYFDYNla0vgC-Q_Og=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="https://lh3.googleusercontent.com/3DVnHDS7xieGxzwf5EhIX2M_hP5zCvHy3skjC9zTNoKlNfFlTo4YCG6ipGLmeffsYYWNb3SAmQQkUWokOvie-0SP52o8ubex3ziYBL-4meZrYCaHvr-cLiGhG3n0yH8i1-VLCH0eHg=w1920-h1080" ><img src="https://lh3.googleusercontent.com/3DVnHDS7xieGxzwf5EhIX2M_hP5zCvHy3skjC9zTNoKlNfFlTo4YCG6ipGLmeffsYYWNb3SAmQQkUWokOvie-0SP52o8ubex3ziYBL-4meZrYCaHvr-cLiGhG3n0yH8i1-VLCH0eHg=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="https://lh3.googleusercontent.com/cArcy39m9O9VEVMHt5gYGIUJQskK4x-s4CPIjHazysbNkYxeYA7DGuTAc9caDCs5AkWEyes1w_sotkfYFsDmdHi5cqgDkxIAC2l_nLc6v921xJmZzPsuz9ghETHdjb-W88xXK1R9LA=w1920-h1080" ><img src="https://lh3.googleusercontent.com/cArcy39m9O9VEVMHt5gYGIUJQskK4x-s4CPIjHazysbNkYxeYA7DGuTAc9caDCs5AkWEyes1w_sotkfYFsDmdHi5cqgDkxIAC2l_nLc6v921xJmZzPsuz9ghETHdjb-W88xXK1R9LA=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="https://lh3.googleusercontent.com/uTfd6B65VaERge-nTZk3ei0nqsnZgg9mkZ6KeKco9kqvVUhF-mbExHXQ3zaTToaCou5oxeAeCOjkY2AROe9u1Njb870DsI2nnRDgPdfC9jMjRCcUgt29qaoinVwKLxV1z-CSj-9gRA=w1920-h1080" ><img src="https://lh3.googleusercontent.com/uTfd6B65VaERge-nTZk3ei0nqsnZgg9mkZ6KeKco9kqvVUhF-mbExHXQ3zaTToaCou5oxeAeCOjkY2AROe9u1Njb870DsI2nnRDgPdfC9jMjRCcUgt29qaoinVwKLxV1z-CSj-9gRA=w1920-h1080" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="gallery-grids">
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g7.jpg" ><img src="images/g7.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g8.jpg" ><img src="images/g8.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="col-md-4 gallery-grid">
-					<div class="gallery-grd">
-						 <a class="swipebox" href="images/g9.jpg" ><img src="images/g9.jpg" class="img-style row6" alt=""><span class="zoom-icon"></span></a>
-					</div>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
+			
+			<!-- Add Events Photos to container dynamically.-->
+			
 			</div>
 			</div>
 
