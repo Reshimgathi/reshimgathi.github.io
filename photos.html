@@ -94,7 +94,7 @@ loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
     var parent = null;
     var data = JSON.parse(text);
     console.log(data);
-    var photoGridForm = "<h2>Event Photos -> An inauguration day - 30-Aug-18 - Reshimgathi</h2>";
+    var photoGridForm = "";
     for(var i=0; i<data.Photos.length;i+3)
     {
     	photoGridForm += "<div class='gallery-grids'>";
@@ -166,7 +166,7 @@ loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
 				<!--wedding-->
 		<div class="wedding-section">
 		<div class="container" id="photoscontainer">
-			
+			<h2>Event Photos -> An inauguration day - 30-Aug-18 - Reshimgathi</h2>
 			<!-- Add Events Photos to container dynamically.-->
 			
 			</div>
