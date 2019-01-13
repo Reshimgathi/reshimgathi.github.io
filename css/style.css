@@ -45,7 +45,7 @@ body{
   font-family: 'OpenSans-Regular'
 }
 .header {
-    background: url(../images/banner2.jpg)no-repeat 0px 0px;
+    background: url(../images/banner2.jpg)no-repeat 0px -180px;
     background-size: cover;
     min-height: 755px;
 }
@@ -957,6 +957,8 @@ h2.tittle {
 }
 .header {
    min-height: 565px;
+       background: url(../images/banner2.jpg)no-repeat 0px -60px;
+    background-size: cover;
 }
 .slider {
     margin-top: 7em;
@@ -1072,13 +1074,15 @@ a.button2 {
 }
 .header {
     min-height: 440px;
+    background: url(../images/banner2.jpg)no-repeat 0px -37px;
+    background-size: cover;
 }
 .banner-grid {
     float: left;
     width: 25%;
 }
 .banner-grids {
-    top: 66px;
+    top: 35px;
 }
 .slider {
     margin-top: 5em;
@@ -1440,7 +1444,7 @@ span.glyphicon.glyphicon-heart, span.glyphicon.glyphicon-camera, span.glyphicon.
     font-size: 0.9em;
 }
 .header {
-    background: url(../images/banner2.jpg)no-repeat -90px 0px;
+    background: url(../images/banner2.jpg)no-repeat -120px -30px;
     background-size: cover;
 }
 .slider-info h3 {
@@ -1597,8 +1601,8 @@ address {
     padding: 0.5em 0;
 }
 .header {
-    background: url(../images/banner2.jpg)no-repeat -170px 0px;
-  background-size:cover;
+    background: url(../images/banner2.jpg)no-repeat -140px -20px;
+    background-size:cover;
 }
 .slider-info p {
     width: 100%;
