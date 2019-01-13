@@ -1712,7 +1712,7 @@ a.button2 {
     margin-bottom: 0.5em;
 }
 .header.head-top {
-    min-height: 360px;
+    min-height: 0px;
 }
 .contact_left {
     padding: 0;
