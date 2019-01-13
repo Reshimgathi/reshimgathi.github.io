@@ -91,6 +91,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 
 //usage:
 loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
+    var parent = null;
     var data = JSON.parse(text);
     console.log(data);
     var photoGridForm = "<h2>Event Photos -> An inauguration day - 30-Aug-18 - Reshimgathi</h2>";
@@ -103,11 +104,12 @@ loadMemories("images/json/VTH4TFfPBEF4JE8y8.json", function(text){
     	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i+1].URL+"'><img src='"+data.Photos[i+1].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div>";
 
     	photoGridForm += "<div class='col-md-4 gallery-grid'><div class='gallery-grd'><a class='swipebox' href='"+data.Photos[i+2].URL+"'><img src='"+data.Photos[i+2].URL+"' class='img-style row6' alt=''><span class='zoom-icon'></span></a></div></div><div class='clearfix'></div></div>";
+
+    	parent = document.getElementById('photoscontainer');
+	  	parent.insertAdjacentHTML('beforeend', photoGridForm);//child added.
     }
 
-    document.getElementsById("photoscontainer").innerHTML = photoGridForm;
     console.log("done");
-    console.log(photoGridForm);
 });
 
 </script>
