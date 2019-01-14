@@ -1328,7 +1328,8 @@ a.button2 {
 }
 .about-grid {
     float: left;
-    width: 50%;
+    width: 100%;
+    margin-bottom: 10px;
 }
 .test1 .textbox {
     width: 301px;
