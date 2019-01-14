@@ -625,7 +625,11 @@ span.glyphicon.glyphicon-send {
   font-size:1em;
   line-height:1.8em;
   color:#999;
-  margin:1em 0 0
+  margin:1em 0 0;
+}
+.textalignproperty
+{
+    text-align: justify;
 }
 .choose-grids {
   margin-top: 3em;
