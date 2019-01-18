@@ -1,3 +1,4 @@
+//Javascript.
 var config  = {
   Script: "Javascript",
   Version : "v1.0",
