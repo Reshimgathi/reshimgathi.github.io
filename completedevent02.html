@@ -97,7 +97,7 @@ loadMemories("images/json/yHmB1RW557qaXnzF8.json", function(text){
     var data = JSON.parse(text);
     //console.log(data);
     var photoGridForm = "";
-    for(var i=0; i<data.Photos.length;i+3)
+    for(var i=0; i<data.Photos.length;i=i+3)
     {
     	photoGridForm = "<div class='gallery-grids'>";
 
