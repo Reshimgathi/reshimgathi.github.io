@@ -1,9 +1,3 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
 @font-face {
     font-family: 'Sail-Regular';
     src:url(../fonts/Sail-Regular.ttf) format('truetype');
@@ -45,7 +39,7 @@ body{
   font-family: 'OpenSans-Regular'
 }
 .header {
-    background: url(../images/banner2.JPG)no-repeat 0px -180px;
+    background: url(../images/banner2.jpg)no-repeat 0px -180px;
     background-size: cover;
     min-height: 755px;
 }
@@ -978,7 +972,7 @@ h2.tittle {
 }
 .header {
    min-height: 565px;
-       background: url(../images/banner2.JPG)no-repeat 0px -60px;
+       background: url(../images/banner2.jpg)no-repeat 0px -60px;
     background-size: cover;
 }
 .slider {
@@ -1095,7 +1089,7 @@ a.button2 {
 }
 .header {
     min-height: 440px;
-    background: url(../images/banner2.JPG)no-repeat 0px -37px;
+    background: url(../images/banner2.jpg)no-repeat 0px -37px;
     background-size: cover;
 }
 .banner-grid {
@@ -1466,7 +1460,7 @@ span.glyphicon.glyphicon-heart, span.glyphicon.glyphicon-camera, span.glyphicon.
     font-size: 0.9em;
 }
 .header {
-    background: url(../images/banner2.JPG)no-repeat -120px -30px;
+    background: url(../images/banner2.jpg)no-repeat -120px -30px;
     background-size: cover;
 }
 .slider-info h3 {
@@ -1553,7 +1547,7 @@ padding:6em 0 2em;
 }
 .header.head-top {
     background-size: cover;
-    background: url(../images/banner2.JPG)no-repeat 0px 0px;
+    background: url(../images/banner2.jpg)no-repeat 0px 0px;
 }
 .team-grids a .captn {
     right: 0%;
@@ -1623,7 +1617,7 @@ address {
     padding: 0.5em 0;
 }
 .header {
-    background: url(../images/banner2.JPG)no-repeat -140px -20px;
+    background: url(../images/banner2.jpg)no-repeat -140px -20px;
     background-size:cover;
 }
 .slider-info p {
